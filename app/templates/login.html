@@ -1,0 +1,25 @@
+<!-- extended from base.html -->
+{% extends "base.html" %}
+{% block content %}
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<center>
+		<form action="/new_user" method="POST" style="background-image: url('/static/image.jpg'); height=30px;">
+			<h1>Blogger</h1>
+			<p></p>
+			<p></p>
+			</br>
+			<h2>Log In</h2>
+			<p></p>
+			<p></p>
+			<div>Username :
+			<input type="text" name="userid"></br></br>
+			Password :
+			<input type="password" name="password"></div>
+			<p><input type="submit" name="submit_button" value="LogIn"></p>
+		</form>
+	</center>
+{% endblock %}

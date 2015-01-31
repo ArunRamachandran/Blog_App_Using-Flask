@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+	<form action='/comment' method='POST' style="background-image: url('http://fc09.deviantart.net/fs70/f/2014/289/d/e/plain_light_orange_halloween_custom_box_background_by_cupcakekitten20-d831idp.png'); height: 600px; padding-right: 20px; padding-left: 10px;">
+	</br>
+	</br>
+	</br>
+	</br>
+	<h5>&nbsp;&nbsp;&nbsp;&nbsp;Posted by {{ user.name }}</h5>
+              <p></p>
+	{% for post in new_post %}
+	<div><p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.posted }}</b></p></div>
+	{% endfor %}
+	
+	<div>---------------------------------------</div>
+	<h3><b>&nbsp;&nbsp;&nbsp;&nbsp;Comments</b></h3>
+	<div>---------------------------------------</div>
+	{% for com in comments %}
+		<p><div>&nbsp;&nbsp;&nbsp;&nbsp;{{ com.name }}said :</div></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ com.comment }}</p>
+	{% endfor %}
+
+	</br>
+	</br>
+	<p><h3>Post a comment :</h3></p>
+	<form action='/comment' method="POST">
+		<p>Name :</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name"></p>
+		<p>Comments :</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="comments" rows="5" cols="20"></textarea></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="my_form" value="submit"></p>
+	</form>
+	</form>
+{% endblock %} 	
+	

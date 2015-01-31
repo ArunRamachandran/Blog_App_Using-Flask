@@ -1,0 +1,37 @@
+<!-- extended from base layout -->
+
+{% extends "base.html" %}
+{% block content %}
+	<!--center -->
+	
+	<div style="background-image: url('http://fc09.deviantart.net/fs70/f/2014/289/d/e/plain_light_orange_halloween_custom_box_background_by_cupcakekitten20-d831idp.png'); height: 600px; padding-right: 20px; padding-left: 10px; font-family: Consolas;">
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		<h5>&nbsp;&nbsp;&nbsp;&nbsp;Posted by {{ user.name }}</h5>
+		<p></p>
+		{% for post in new_post %}
+		<div><p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post.posted }}</b></p></div>
+			
+		<p></p>
+		{% endfor %}
+
+		<!-- script>
+		 	alert("Please Login To add a New Blog!");
+		</script -->
+
+		<form action= '/comment' autocomplete="on" method="POST">
+			<p>Name :</p>
+				<p><input type="text" name="name"></p>
+				<p>Comments :</p>
+			<p><textarea name="comments" rows="5" cols="20"></textarea></p>
+			<p><input type="submit" name="my_form" value="submit"></p>
+		</form>
+	</div>
+	<!--/center -->
+		<script>
+			alert("Please LogIn to add a new Blog !");
+		</script>
+{% endblock %}

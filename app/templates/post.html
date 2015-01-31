@@ -1,0 +1,24 @@
+<!-- extended from base.html -->
+
+{% extends "base.html" %}
+{% block content %}
+	<center>
+	<form action='/process' method='POST' style="background-image: url('http://fc09.deviantart.net/fs70/f/2014/289/d/e/plain_light_orange_halloween_custom_box_background_by_cupcakekitten20-d831idp.png'); height: 600px; padding-right: 20px; padding-left: 10px;">
+		</br>
+		</br>
+		<h2>Welcome Blogger !</h2>
+		</br>
+		<h3>Add a new Blog Post</h3>
+		<p></p>
+		<div>Title :
+		<input type="text" name="title"></br>
+		<p></p>
+		<p></p>
+		Start Writing :</br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;
+		<textarea name="text" rows="10" cols="37">A big load of text !!!</textarea>
+		</br>
+		<p><input type="submit" name="blog_post" value="Post !"></p>
+	</form>
+	</center>
+{% endblock %}
